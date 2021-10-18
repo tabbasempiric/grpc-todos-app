@@ -1,2 +1,2 @@
 # grpc-todos-app
-This is a simple todos app build using protobuf and grpc
+This is a simple todos app built using protobuf and grpc
