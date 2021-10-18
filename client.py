@@ -28,13 +28,14 @@ async def run():
                 channel.unsubscribe(close)
                 exit()
 
+
 def close(channel):
     channel.close()
+
 
 def main():
     asyncio.run(run())
 
 
-if __name__=="__main__":
+if __name__ == "__main__":
     asyncio.run(run())
-    # await main()

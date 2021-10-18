@@ -40,8 +40,8 @@ class Todo(todo_pb2_grpc.TodoServicer):
     def readTodos(self, request, context):
         todos_list: list = []
         todos = self.db.todos.find()
-        for next in todos:
-            one_todo = todo_pb2.TodoItem(id=str(next["_id"]), text=next["action"])
+        for NEXT in todos:
+            one_todo = todo_pb2.TodoItem(id=str(NEXT["_id"]), text=NEXT["action"])
             todos_list.append(one_todo)
         self.request_count +=1
         if self.request_count % 1000 == 0:
