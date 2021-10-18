@@ -1,0 +1,1 @@
+CONNECT=mongodb+srv://mango_admin:s3I9LxhFWDB4ZJUX@cluster0.bmusi.mongodb.net/todos?retryWrites=true&w=majority
