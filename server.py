@@ -9,9 +9,10 @@ import json
 
 MONGO_CONFIG = "mongo_config.txt"
 
-def read_ccloud_config(config_file):
+
+def read_mcloud_config(config_file):
     """
-    Read Confluent Cloud configuration for librdkafka clients
+    Read Atlas Cloud configuration
     """
 
     conf = {}
@@ -24,7 +25,7 @@ def read_ccloud_config(config_file):
     return conf
 
 
-MONGO_CONFIG = read_ccloud_config(MONGO_CONFIG)
+MONGO_CONFIG = read_mcloud_config(MONGO_CONFIG)
 
 
 class Todo(todo_pb2_grpc.TodoServicer):
@@ -64,6 +65,7 @@ def serve():
     except KeyboardInterrupt as e:
         print("Keyboard interrupt!\n")
         server.stop(grace=1)
+
 
 if __name__ == "__main__":
     serve()
